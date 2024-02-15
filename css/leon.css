@@ -6,6 +6,11 @@
 
 /* start compantents */
 
+
+html{
+  scroll-behavior: smooth;
+}
+
 .title{
   position: relative;
  
@@ -14,7 +19,7 @@
 
   padding: 0px;
   margin: 0;
-  font-size: 150px;
+  font-size: 10rem;
   text-align: center;
   opacity: 15%;
   font-weight: 800;
@@ -319,29 +324,31 @@ header .container .links ul li a:hover{
 .portflio {
   background-color: #f7f7f7;
 }
+.portflio .container{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
 .portflio .container .projects{
   display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill , minmax( 300px , 1fr ));
+
 }
 
 .portflio .container .projects .project{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.portflio .container .projects .image{
-  background-color: #777;
-  width: 350px;
-  height: 200px;
+
+ padding: 20px;
 }
 
+.portflio .container .projects .image img{
+  width: 100%;
+  height: 100%;
+}
 
 .portflio .container .projects .project .text{
-  margin-left:10px ;
+  padding-left: 30px;
 }
-
 .portflio .container .projects .project .text h3{
   margin: 10px 0px ;
 
@@ -352,3 +359,48 @@ header .container .links ul li a:hover{
  
 }
 /* end portflio */
+
+/* start about */
+.about .container {
+  margin-top: 100px;
+  padding-bottom: 80px;
+}
+.about .container .info{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+.about .container .info .image{
+  width: 250px;
+  height:300px;
+  overflow:hidden;
+  
+
+}
+
+.about .container .info .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about .container .info .text{
+  flex-basis: calc(100% - 500px);
+}
+
+.about .container .info .text p:first-of-type {
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 50px;
+}
+.about .container .info .text hr {
+  width: 50%;
+  display: inline-block;
+  border-color: var(--main-color);
+}
+.about .container .info .text p:last-of-type {
+  line-height: 2;
+  color: #777;
+}
+/* end about */
